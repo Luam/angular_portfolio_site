@@ -17,8 +17,8 @@ portfolioApp.config(function($routeProvider){
 		controller : 'freelanceController'
 	})
 
-	.when('/playground', {
-		templateUrl : 'pages/playground.html',
+	.when('/demos', {
+		templateUrl : 'pages/demos.html',
 		controller : 'playgroundController'
 	})
 

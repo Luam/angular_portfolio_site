@@ -1,0 +1,88 @@
+/******** GENERAL **********/
+.widget-title{
+	margin: 20px 0px 20px 50px;
+	font-weight: bold !important;
+	font-style: 24px !important;
+}
+
+
+
+
+/******** BUTTON MODAL **********/
+.morph-content{
+	background-color: #77b800;
+	margin-top: 0px;
+    background-color: #77b800;
+    margin-left: 40px;
+    width: 50%;
+    padding: 20px;
+}
+.morph-content h2{
+	font-size: 22px;
+	text-align: center;
+	margin-top: 2px;
+	margin-bottom: 25px;
+}
+.morph-button button{
+	padding: 10px 30px 10px 30px;
+    font-size: 24px;
+	background-color:#D57800;
+	box-shadow: transparent;
+	border: 0;
+	color: #fff;
+	margin: 15px 0 0 40px;
+}
+.watch-now-btn{
+	width: 50%;
+	font-size: 18px;
+}
+.watch-now-btn span{
+	font-size: 27px;
+}
+.submit-btn{
+    width: 100%;
+    font-size: 16px;
+    margin: 15px 0 0 0 !important;
+}
+.morph-content .btn-default:hover,  .morph-button button.btn-default:hover, .morph-button button.btn-default:visited, .morph-button button.btn-default:focus{
+	background-color: #63666a !important;
+	color: #fff !important;
+}
+.morph-content input{
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #bebebe;
+    padding: 7px;
+    margin: 0;
+    -webkit-transition: all .30s ease-in-out;
+    -moz-transition: all .30s ease-in-out;
+    -ms-transition: all .30s ease-in-out;
+    -o-transition: all .30s ease-in-out;
+    outline: 0;
+}
+.morph-content .input-group{
+	margin-bottom: 10px;
+}
+
+.morph-content .input-group-addon {
+	background-color: #d57800;
+}
+.morph-content .input-group-addon:nth-child(2) {
+	padding-right: 9px;
+}
+.morph-content .fa{
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
