@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
 #main{
   margin-top: 50px;
 }
@@ -22,28 +24,14 @@ header .banner{
 }
 header {
       
-	background-color:rgb(37, 40, 57);
+	background-color:#2C3E50;
   position: relative;
   height: 700px;
   min-height: 500px;
   width: 100%;
   overflow: hidden;
 }
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes AnimationName { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
+
 header .banner-text {
   width: 100%;
   padding: 30px;
@@ -88,7 +76,7 @@ header .social {
 }
 header .inner h3{
 	color: #ccc;
-	font-size: 16px;
+	font-size: 24px;
 }
 header .right-panel{
 	padding-top: 20px;
@@ -110,7 +98,7 @@ ul {
   color: #ccc;
 }
 ul.unstyled{
-	font-size: 14px;
+    font-size: 18px;
 }
 ul.unstyled li{
 	padding: 2px 0 0px 0;
@@ -185,22 +173,39 @@ section{
 
 }
 
+@-webkit-keyframes portfolioBG {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes portfolioBG {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes portfolioBG { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+
 .portfolio-title{
   font-size: 50px !important;
   margin-top: 0px !important;
   color: #fff;
 }
 .portfolio-section{
-
+border-top: 3px dotted #ccc !important;
 
 background: linear-gradient(227deg, #602121, #9a291f, #ba3902, #be611b, #c99319, #13be71, #19a5cb, #2c778b, #2b4f59, #1c2e64, #2e1844, #461140, #6b1a37, #82181d, #871a1f);
 background-size: 3000% 3000%;
 
--webkit-animation: AnimationName 56s ease infinite;
--moz-animation: AnimationName 56s ease infinite;
-animation: AnimationName 56s ease infinite;
+-webkit-animation: portfolioBG 56s ease infinite;
+-moz-animation: portfolioBG 56s ease infinite;
+animation: portfolioBG 56s ease infinite;
 
-padding-top: 30px;       
+  padding-top: 30px;       
  padding-bottom: 40px;       
 }
 
@@ -441,7 +446,7 @@ body { background-color: #eee; }
     -moz-transform:rotate(-15deg);
     -webkit-transform:rotate(-15deg);
     -o-transform:rotate(-15deg);
-    margin-left: 19%;
+    margin-left: 27%;
     margin-top: 1%;
   }
   .collage a:nth-child(10), .collage-2 a:nth-child(10) {
@@ -779,6 +784,15 @@ body { background-color: #eee; }
 
   /*Padding and Margins*/
 
+.padding-10{
+  padding: 10px !important;
+}
+.padding-20{
+  padding: 20px !important;
+}
+.padding-40{
+  padding: 20px !important;
+}
   .no-left-padding{
    padding-left: 0 !important;
  }
@@ -798,7 +812,10 @@ body { background-color: #eee; }
    margin-right:0;
  }
 
+@media (min-width:1300px){
 
+
+}
  @media (min-width: 1200px)
  .container {
   width: 100% !important; 
@@ -814,3 +831,300 @@ body { background-color: #eee; }
 }
 
 
+
+
+
+
+
+
+
+/* general style for the form */
+.nl-form {
+  color: #fff;
+  width: 100%;
+  margin: 0.3em auto 0 auto;
+  font-size: 4em;
+  line-height: 1.5;
+  padding: 40px;
+}
+
+.nl-form ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* normalize the input elements, make them look like everything else */
+.nl-form input,
+.nl-form select,
+.nl-form button {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.nl-form input:focus {
+  outline: none;
+}
+
+/* custom field (drop-down, text element) styling  */
+.nl-field {
+  display: inline-block;
+  position: relative;
+}
+
+.nl-field.nl-field-open {
+  z-index: 10000;
+}
+
+/* the toggle is the visible part in the form */
+.nl-field-toggle,
+.nl-form input,
+.nl-form select  {
+  line-height: inherit;
+  display: inline-block;
+  color: #2C3E50;
+  cursor: pointer;
+  border-bottom: 2px dashed #2C3E50;
+}
+
+/* drop-down list / text element */
+.nl-field ul {
+  position: absolute;
+  visibility: hidden;
+  background: #76C3BD;
+  left: -0.5em;
+  top: 50%;
+  font-size: 80%;
+  opacity: 0;
+  -webkit-transform: translateY(-40%) scale(0.9);
+  -moz-transform: translateY(-40%) scale(0.9);
+  transform: translateY(-40%) scale(0.9);
+  -webkit-transition: visibility 0s 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: visibility 0s 0.3s, opacity 0.3s, -moz-transform 0.3s;
+  transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+.nl-field.nl-field-open ul {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(-50%) scale(1);
+  -moz-transform: translateY(-50%) scale(1);
+  transform: translateY(-50%) scale(1);
+  -webkit-transition: visibility 0s 0s, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: visibility 0s 0s, opacity 0.3s, -moz-transform 0.3s;
+  transition: visibility 0s 0s, opacity 0.3s, transform 0.3s;
+}
+
+.nl-field ul li {
+  color: #fff;
+  position: relative;
+}
+
+.nl-dd ul li {
+  padding: 0 1.5em 0 0.5em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nl-dd ul li.nl-dd-checked {
+  color: #478982;
+}
+
+.no-touch .nl-dd ul li:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.no-touch .nl-dd ul li:hover:active {
+  color: #478982;
+}
+
+/* icons for some elements */
+.nl-dd ul li.nl-dd-checked:before,
+.nl-submit:before,
+.nl-field-go:before {
+  font-family: 'nlicons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.nl-dd ul li.nl-dd-checked:before {
+  content: "\e000";
+  position: absolute;
+  right: 1em;
+  font-size: 50%;
+  line-height: 3;
+}
+
+.nl-ti-text ul {
+  min-width: 8em;
+}
+
+.nl-ti-text ul li.nl-ti-input input {
+  width: 100%;
+  padding: 0.2em 2em 0.2em 0.5em;
+  border-bottom: none;
+  color: #fff;
+}
+
+.nl-form .nl-field-go {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  cursor: pointer;
+  background: rgba(0,0,0,0.1);
+  width: 1.8em;
+  text-align: center;
+  color: transparent;
+}
+
+.nl-field-go:before {
+  content: "\e001";
+  font-size: 75%;
+  color: #fff;
+  width: 100%;
+  line-height: 2.5;
+  display: block;
+}
+
+/* custom placeholder color */
+input::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.8);
+}
+
+input:active::-webkit-input-placeholder ,
+input:focus::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.2);
+}
+
+input::-moz-placeholder {
+  color: rgba(255,255,255,0.8);
+}
+
+input:active::-moz-placeholder,
+input:focus::-moz-placeholder {
+  color: rgba(255,255,255,0.2);
+}
+
+input:-ms-input-placeholder {  
+  color: rgba(255,255,255,0.8);
+}
+
+input:active::-ms-input-placeholder ,
+input:focus::-ms-input-placeholder {
+  color: rgba(255,255,255,0.2);
+}
+
+/* example field below text input */
+.nl-ti-text ul li.nl-ti-example {
+  font-size: 40%;
+  font-style: italic;
+  font-weight: 400;
+  padding: 0.4em 1em;
+  color: rgba(0,0,0,0.2);
+  border-top: 1px dashed rgba(255,255,255,0.7);
+}
+
+.nl-ti-text ul li.nl-ti-example em {
+  color: #fff
+}
+
+/* submit button */
+.nl-submit-wrap {
+  margin-top: 0.4em;
+}
+
+.nl-form .nl-submit {
+  line-height: 3;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  background: #2C3E50;
+  color: #fff;
+  padding: 0 1em 0 1em;
+  font-size: 40%;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.nl-submit:before {
+  color: #2C3E50;
+  float: left;
+  padding: 0 0.7em;
+  margin: 0 0.8em 0 0;
+  background: #69B1A9;
+}
+
+.no-touch .nl-form .nl-submit:hover,
+.no-touch .nl-form .nl-submit:active {
+  background: #69B1A9;
+}
+
+.no-touch .nl-form .nl-submit:hover:before {
+  background: #58a199;
+}
+
+/* overlay becomes visible when a field is opened */
+.nl-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  z-index: 9999;
+  visibility: hidden;
+  -webkit-transition: visibility 0s 0.3s, opacity 0.3s;
+  -moz-transition: visibility 0s 0.3s, opacity 0.3s;
+  transition: visibility 0s 0.3s, opacity 0.3s;
+}
+
+.nl-field.nl-field-open ~ .nl-overlay {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+@media screen and (max-width: 45em) {
+  .nl-form {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 25em) {
+  .nl-form {
+    font-size: 2em;
+  }
+}
+
+
+
+
+
+
+.form-section{
+  
+
+background: #00c6ff; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #00c6ff , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #00c6ff , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+
+}
