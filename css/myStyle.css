@@ -28,7 +28,6 @@ header {
       
 	background-color:#252839;
   position: relative;
-  height: 700px;
   min-height: 500px;
   width: 100%;
   overflow: hidden;
@@ -330,7 +329,7 @@ background-color: #539EC4;
     padding-right: 0;
       background: #BF3100;
 background-size: 2400% 2400%;
-height: 1100px;
+height: 1230px;
 
 }
 
@@ -723,7 +722,7 @@ body { background-color: #eee; }
    margin-top: 71px;
 }
  header a.btn{
-    background-color: #ACA38F;
+    background-color: #B3A380;
    
     text-decoration: none;
     text-transform: uppercase;
@@ -833,7 +832,7 @@ body { background-color: #eee; }
 
 /* general style for the form */
 .submit-container{
-  padding-right: 64px ;
+  padding-right: 64px !important;
 }
 
 .form{
@@ -943,13 +942,18 @@ form{
       padding-left: 0;
     }
     .submit-container{
-      padding-right: 0px ;
+      padding-right: 0px !important;
     }
     #main{
       padding-top: 0px;
     }
   }
+@media (max-width: 1000px){
+  header .banner-text h1 {
+    font-size: 33px !important;
+  }
 
+}
 
 
 

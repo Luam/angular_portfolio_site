@@ -20,7 +20,7 @@ if(isset($_POST['email'])) {
  
      
  
-    // EDIT THE 2 LINES BELOW AS REQUIRED
+
  
     $email_to = "luam13@gmail.com";
  
@@ -53,6 +53,8 @@ if(isset($_POST['email'])) {
     if(!isset($_POST['name']) ||
  
         !isset($_POST['email']) ||
+
+        !isset($_POST['phone']) ||
  
         !isset($_POST['messege'])) {
  
@@ -65,6 +67,8 @@ if(isset($_POST['email'])) {
     $name = $_POST['name']; // required
  
     $email = $_POST['email']; // required
+
+    $messege = $_POST['messege']; // required
  
     $messege = $_POST['messege']; // required
  
@@ -112,6 +116,8 @@ if(isset($_POST['email'])) {
     $email_message .= "Name: ".clean_string($name)."\n";
  
     $email_message .= "Email: ".clean_string($email)."\n";
+
+    $email_message .= "phone: ".clean_string($phone)."\n";
  
     $email_message .= "Messege: ".clean_string($messege)."\n";
  
@@ -134,11 +140,7 @@ $headers = 'From: '.$email."\r\n".
 ?>
  
 <!--  success message -->
- <div class="email-response col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding:50px;">
-	<div class="text-center lead">Thank You!</div>
-	<div class="text-center lead">I Will Get Back To You Shortly</div>
-	<div class="text-center"><a href="/index.html" class="lead" style="color:#fff;text-decoration:underline;">Back to Site</a></div>
- </div>
+
  
 <?php
  
@@ -146,6 +148,10 @@ $headers = 'From: '.$email."\r\n".
  
 ?>
 
+<script>
 
+    alert("success!");
+    window.location.replace("http://luamyemane.com");
+</script>
 </body>
 </html>

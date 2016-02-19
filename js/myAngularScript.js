@@ -59,46 +59,44 @@ portfolioApp.controller('socialController', function($scope) {
 
 
 
-// var instagramApp = angular.module("instagram", []);
 
-// instagramApp.factory('instagram', ['$http', function($http){
 
-// 	return {
-// 		fetchPopular: function(callback){
-            
-//             var endPoint = "https://api.instagram.com/v1/media/popular?client_id=642176ece1e7445e99244cec26f4de1f&callback=JSON_CALLBACK";
-            
-//             $http.jsonp(endPoint).success(function(response){
-//                 callback(response.data);
-//             });
-// 		}
-// 	}
 
-// }]);
 
-// instagramApp.controller('instagramGridController', ['$scope', 'instagram' ,
-// function ($scope, instagram){
 
-	
 
-// 	$scope.layout = 'grid';
+
+
+// Todo list demo
+
+function TodoCtrl($scope) {
+  $scope.todos = [
+    {text:'learn angular', done:true},
+    {text:'build an angular app', done:false}],
     
-//     $scope.setLayout = function(layout){
-//         $scope.layout = layout;
-//     };
-    
-//     $scope.isLayout = function(layout){
-//         return $scope.layout == layout;
-//     };
 
-// 	$scope.pics = [];
+  $scope.addTodo = function() {
+    $scope.todos.push({text:$scope.todoText, done:false});
+    $scope.todoText = '';
+  };
 
-	
-// 	instagram.fetchPopular(function(data){
+  $scope.remaining = function() {
+    var count = 0;
+    angular.forEach($scope.todos, function(todo) {
+      count += todo.done ? 0 : 1;
+    });
+    return count;
+  };
 
-// 		$scope.pics = data;
-// 	});
+  $scope.delete = function() {
+    var oldTodos = $scope.todos;
+    $scope.todos = [];
+    angular.forEach(oldTodos, function(todo) {
+      if (!todo.done) $scope.todos.push(todo);
+    });
+  };
+}
 
-// }]);
+
 
 

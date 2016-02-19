@@ -7,10 +7,13 @@ $(function() {
 	});
 
 
-	  $(".morph-content-2").hide();
+	$(".morph-content-2").hide();
 
 		$( ".message-btn" ).click(function() {
 				$(".morph-content-2").slideToggle();
-		});
+	});
+
+
+
 
 });
