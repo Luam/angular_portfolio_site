@@ -139,7 +139,6 @@ $headers = 'From: '.$email."\r\n".
  
 ?>
  
-<!--  success message -->
 
  
 <?php

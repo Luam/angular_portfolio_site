@@ -12,19 +12,19 @@ portfolioApp.config(function($routeProvider){
 		controller : 'aboutController'
 	})
 
-	.when('/freelance', {
-		templateUrl : 'pages/freelance.html',
-		controller : 'freelanceController'
+	.when('/portfolio', {
+		templateUrl : 'pages/portfolio.html',
+		controller : 'portfolioController'
 	})
 
 	.when('/demos', {
 		templateUrl : 'pages/demos.html',
-		controller : 'playgroundController'
+		controller : 'demoController'
 	})
 
-	.when('/social', {
-		templateUrl : 'pages/social.html',
-		controller : 'socialController'
+	.when('/contact', {
+		templateUrl : 'pages/contact.html',
+		controller : 'contactController'
 	});
 
 
@@ -39,21 +39,21 @@ portfolioApp.controller('aboutController', function($scope) {
 });
 
 // create the controller and inject Angular's $scope
-portfolioApp.controller('freelanceController', function($scope) {
+portfolioApp.controller('portfolioController', function($scope) {
 	// create a message to display in our view
-        $scope.message = 'Freelance Services';
+        // $scope.message = 'Freelance Services';
 });
 
 // create the controller and inject Angular's $scope
-portfolioApp.controller('playgroundController', function($scope) {
+portfolioApp.controller('demoController', function($scope) {
 	// create a message to display in our view
-        $scope.message = 'Welcome to the playground';
+        // $scope.message = 'Welcome to the playground';
 });
 
 // create the controller and inject Angular's $scope
-portfolioApp.controller('socialController', function($scope) {
+portfolioApp.controller('contactController', function($scope) {
 	// create a message to display in our view
-        $scope.message = 'Let\'s get Social!!!';
+        // $scope.message = 'Let\'s get Social!!!';
 });
 
 
@@ -99,4 +99,33 @@ function TodoCtrl($scope) {
 
 
 
-
+    // define angular module/app
+    var formApp = angular.module('formApp', []);
+    // create angular controller and pass in $scope and $http
+    function formController($scope, $http) {
+      // create a blank object to hold our form information
+      // $scope will allow this to pass between controller and view
+      $scope.formData = {};
+      // process the form
+      $scope.processForm = function() {
+        $http({
+              method  : 'POST',
+              url     : 'process.php',
+              data    : $.param($scope.formData),  // pass in data as strings
+              headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
+          })
+              .success(function(data) {
+                  console.log(data);
+                  if (!data.success) {
+                    // if not successful, bind errors to error variables
+                      $scope.errorName = data.errors.name;
+                      $scope.errorSuperhero = data.errors.superheroAlias;
+                  } else {
+                    // if successful, bind success message to message
+                      $scope.message = data.message;
+                                        $scope.errorName = '';
+                      $scope.errorSuperhero = '';
+                  }
+              });
+      };
+    }

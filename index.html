@@ -1,76 +1,67 @@
 <!DOCTYPE html>
-  <html ng-app="portfolioApp">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <!-- load bootstrap and fontawesome via CDN -->
-    <link rel="stylesheet" href="/css/myStyle.css" />
-    <link rel="stylesheet" href="/css/demos.css" />
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
-    <link href="css/hover-min.css" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="css/normalize.css">
+<html ng-app="portfolioApp" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-    <!-- load angular and angular route via CDN -->
-    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mixitup.js"></script>
-    <script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <!-- load bootstrap and fontawesome via CDN -->
+  <link rel="stylesheet" href="/css/myStyle.css" />
+  <link rel="stylesheet" href="/css/demos.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+  <link href="css/hover-min.css" rel="stylesheet" media="all">
+  <link href="https://cdn.datatables.net/1.10.11/css/dataTables.bootstrap.min.css" rel="stylesheet" media="all">
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-resource.min.js"></script>
-    <script type="text/javascript" src="/js/myAngularScript.js"></script>
-    <script type="text/javascript" src="/js/myJQuery.js" ></script>
-    <script src="js/modernizr.custom.js"></script>
-    
+  <!-- load angular and angular route via CDN -->
+  <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.mixitup.js"></script>
+  <script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
 
-
-
-
-
-  </head> 
-  <body>
-
-
-
-<!--   <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-   
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Luam Fessehazion</a>
-      </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-resource.min.js"></script>
+  <script type="text/javascript" src="/js/myAngularScript.js"></script>
+  <script type="text/javascript" src="/js/myJQuery.js" ></script>
+  <script src="/js/modernizr.custom.js"></script>
+ <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+ <script src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js"></script>
+</head> 
+<body>
 
       
-      <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="#" class="active"><i class="fa fa-user"></i>About Me</a></li>
-              <li><a href="#freelance"><i class="fa fa-shield"></i>Freelance Services</a></li>
-              <li><a href="#demos"><i class="fa fa-code"></i>Demos</a></li>
-              <li><a href="#social"><i class="fa fa-comment"></i>Social</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-         -->
-
-         
-
-        <!-- MAIN CONTENT -->
-        <div id="main">
-
-            <!-- loading angular templates here -->
-            <div ng-view></div>
-        </div>
+ <!--  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-right">
+    <input type="checkbox" id="menu_opener_id" class="menu_opener">
+      <label for="menu_opener_id" class="menu_opener_label"></label>
+      <div class="barre_hamburger"></div>
+      <a href="#" class="link_one link_general"><i class="fa fa-user" style="display:block;"></i> About</a>
+      <a href="#demos" class="link_two link_general"><i class="fa fa-code"></i> Demos</a>
+      <a href="#portfolio" class="link_three link_general"><i class="fa fa-desktop"></i> Portfolio</a>
+      <a href="#contact" class="link_four link_general"><i class="fa fa-desktop"></i>  Contact</a>
+    </input>
+  </div> -->
     
-    <script src="/js/modernizr.custom.js" type="text/javascript"></script>
-    </body>
-    </html>
+    <div>
+      <ul id="menu_area main-menu" class="nav nav-pills nav-justified main-menu">
+          <li class="active"><a href="#" data-toggle="tab" id="menu_text"><i class="fa fa-user"></i> About Me</a></li>
+          <li><a href="#portfolio" data-toggle="tab" id="menu_text"><i class="fa fa-desktop"></i> Portfolio</a></li>
+          <li><a href="#demos" data-toggle="tab" id="menu_text"><i class="fa fa-code"></i> Demos</a></li>
+          <li><a href="#contact" data-toggle="tab" id="menu_text"><i class="fa fa-comment"></i> Contact</a></li>
+      </ul>
+     </div>
+
+
+
+
+
+
+<!-- MAIN CONTENT -->
+<div id="main">
+
+  <!-- loading angular templates here -->
+  <div ng-view></div>
+</div>
+
+<script src="/js/modernizr.custom.js" type="text/javascript"></script>
+
+</body>
+</html>

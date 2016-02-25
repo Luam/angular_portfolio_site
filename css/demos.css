@@ -9,7 +9,7 @@
 	text-align: center;
 }
 .widgets{
-	background-color: #ebebeb;
+	background-color: #DFD6D4;
 	margin:10px;
     padding: 10px 0 35px 0;
 	min-height: 200px;
@@ -19,6 +19,7 @@
 	font-size: 18px !important;
 }
 .widget-container{
+	padding-top: 45px;
 	padding-left: 30px !important;
 	padding-right: 30px !important;
 }
@@ -111,7 +112,7 @@
   color: #aaa;
 }
 .well{
-	background-color: #3D556A !important;
+	background-color: #7B6762 !important;
 	color: #eee;
 	font-family: "Lato", "Helvetica";
 }
@@ -230,3 +231,61 @@
     }
 }
 
+
+
+#dataTable_wrapper{
+	background-color: #F5F5F5;
+	padding: 20px;
+}
+
+
+/* Basic sample */
+
+.ng-valid.ng-dirty{
+    border-color: green;
+}
+.ng-invalid.ng-dirty{
+    border-color: red;
+}
+
+/* bookflip */
+
+#book {
+	background: url("/images/book_image/book.png") no-repeat;
+	position: absolute;
+	width: 830px;
+	height: 260px;
+    margin-left: 55px;
+    margin-top: 50px;
+}
+
+#pages section {
+	background: url("/images/book_image/paper.png") no-repeat;
+	display: block;
+	width: 400px;
+	height: 250px;
+	position: absolute;
+	left: 415px;
+	top: 5px;
+	overflow: hidden;
+}
+	#pages section>div {
+		display: block;
+		width: 400px;
+		height: 250px;
+		font-size: 12px;
+	}
+	#pages section p,
+	#pages section h2 {
+		padding: 3px 35px;
+		line-height: 1.4em;
+		text-align: justify;
+	}
+	#pages section h2{
+		margin: 15px 0 10px;
+	}
+
+#pageflip-canvas {
+	position: absolute;
+	z-index: 100;
+}
